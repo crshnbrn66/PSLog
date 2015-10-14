@@ -80,7 +80,7 @@ function Write-Log
     {
       if((test-path $fileName) -eq $false )
       {
-          new-item -Path $filename -Force
+           new-item -Path $filename -itemtype file -Force
       }
       if($message -is [datetime])
       {
